@@ -15,13 +15,17 @@
 
   <div id="task-section" style="display:none;">
     <h2>Create New Task</h2>
-    <input type="text" id="taskName" placeholder="Task title"><br>
-    <input type="file" id="fileInput"><br>
+    <input type="text" id="taskName" placeholder="Task title">
+    <input type="text" id="taskDescription" placeholder="Task description">
+    <input type="file" id="fileInput">
     <button id="createTaskBtn">Create Task</button>
     <button id="logoutBtn">Logout</button>
 
-    <h2>Your Tasks</h2>
-    <ul id="taskList"></ul>
+    <h2>Pending Tasks</h2>
+    <div id="pendingTasks" class="task-grid"></div>
+
+    <h2>Completed Tasks</h2>
+    <div id="completedTasks" class="task-grid"></div>
   </div>
 
   <!-- Script Modules -->

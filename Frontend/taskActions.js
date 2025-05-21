@@ -1,10 +1,10 @@
-// taskActions.js
+// ✅ Updated taskActions.js (Frontend)
 import { config } from './config.js';
 
-export const getTasks = async (userId) => {
+export const getTasks = async () => {
   const token = localStorage.getItem("idToken");
 
-  const response = await fetch(`${config.apiBaseUrl}/tasks?user_id=${userId}`, {
+  const response = await fetch(`${config.apiBaseUrl}/tasks`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

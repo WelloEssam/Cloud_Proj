@@ -1,51 +1,104 @@
-/* styles.css */
+/* Base layout */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   margin: 2rem;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #111827;
+  color: #f3f4f6;
 }
 
+/* Headings */
 h1, h2 {
-  color: #2c3e50;
+  color: #f9fafb;
+  margin-bottom: 0.5rem;
 }
 
-input, button {
-  margin: 0.4rem 0;
-  padding: 0.6rem;
+/* Form inputs */
+input {
+  margin: 0.3rem 0;
+  padding: 0.4rem 0.6rem;
   width: 100%;
   max-width: 300px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
 }
 
+/* Buttons */
 button {
-  background-color: #3498db;
+  background-color: #8b5cf6;
   color: white;
   border: none;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  margin: 0.2rem 0.2rem 0.2rem 0;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #7c3aed;
 }
 
-#taskList {
-  list-style-type: none;
-  padding: 0;
+/* Task grid with exactly 2 cards per row */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: 1rem;
 }
 
-#taskList li {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
+/* Task card styling */
+.task-card {
+  background-color: #1f2937;
+  border-radius: 8px;
+  padding: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.9rem;
 }
 
-#taskList button {
-  margin-right: 1rem;
-  padding: 0.5rem 1rem;
-  width: auto;
+/* Title */
+.task-card strong {
+  font-size: 1rem;
+  color: #f9fafb;
+}
+
+/* Description */
+.task-card p {
+  margin: 0.3rem 0 0.6rem 0;
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+/* Attachment link */
+.task-card a {
+  color: #06b6d4;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Status */
+.task-card em {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Button container inside each card */
+.task-card div {
+  margin-top: 0.4rem;
+}
+
+/* Login and action buttons */
+#auth-section button,
+#logoutBtn,
+#createTaskBtn {
+  max-width: 200px;
+  display: inline-block;
 }
