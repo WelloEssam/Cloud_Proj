@@ -3,7 +3,8 @@ import { createTask } from './api.js';
 import { getTasks, deleteTask, updateTask } from './taskActions.js';
 
 // AWS Cognito Hosted UI login URL
-const loginUrl = "https://eu-north-1nnysqqqte.auth.eu-north-1.amazoncognito.com/login?client_id=3svgphpvop38942rvddn007qoq&response_type=token&scope=email+openid+profile&redirect_uri=http://localhost:5500/Frontend/index.html";
+const redirectUri = window.location.origin + "/index.html";
+const loginUrl = `https://eu-north-1nnysqqqte.auth.eu-north-1.amazoncognito.com/login?client_id=3svgphpvop38942rvddn007qoq&response_type=token&scope=email+openid+profile&redirect_uri=${encodeURIComponent(redirectUri)}`;
 
 // Extract token from URL (after login redirect)
 function getTokenFromUrl() {
