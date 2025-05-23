@@ -49,7 +49,7 @@ if (localStorage.getItem("idToken")) {
 // Render all tasks
 async function renderTasks() {
   const userId = getUserIdFromToken();
-  const result = await getTasks(userId);
+  const result = await getTasks();
 
   const pendingList = document.getElementById("pendingTasks");
   const completeList = document.getElementById("completedTasks");
